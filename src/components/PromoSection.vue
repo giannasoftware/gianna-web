@@ -1,7 +1,7 @@
 <template>
     <div class="w-full bg-secondary pt-4 md:pt-6 lg:pt-10 xl:pt-11">
         <div class="container mx-auto">
-            <div class="flex flex-col-reverse items-center py-16 md:py-0 md:flex-row">
+            <div class="flex flex-col-reverse items-center py-16 md:py-0 md:flex-row overflow-hidden">
                 <!-- Left Item -->
                 <div class="flex flex-col mt-4 md:mt-0 md:w-1/2">
                     <h4 class="text-xl md:text-2xl text-center font-Cormorant tracking-sm md:text-left uppercase">Annual
@@ -28,7 +28,7 @@
 
                     <div class="shrink-0 md:-mb-2 xl:-mt-2">
                         <img src="@/assets/img/banner.png" alt="Summer Collective"
-                            class="w-full h-72 md:h-[598px] xl:h-[665px] 2xl:h-[705px] object-fill object-center">
+                            class="w-full h-full object-fill object-center">
                     </div>
 
                     <div class="hidden text-sm absolute right-0 top-80 group btn-slides items-center lg:block ">

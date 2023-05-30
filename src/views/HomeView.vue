@@ -19,7 +19,11 @@
   <!-- Products-->
   <PageSection title="Our Products" link="/shop">
     <template #content>
-     
+      <div class="mt-6 grid grid-cols-3 gap-x-4 gap-y-6 xl:gap-x-6">
+        <GridView/>
+        <GridView/>
+        <GridView/>
+      </div>
     </template>
   </PageSection>
 
@@ -39,6 +43,7 @@ import CategoryItem from '@/components/CategoryItem.vue';
 import PageSection from '@/components/PageSection.vue';
 import ProductItem from '@/components/ProductItem.vue';
 import CTA from '@/components/banner/CTA';
+import GridView from '@/components/products/GridView';
 
 
 </script>
