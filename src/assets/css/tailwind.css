@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font: 400 1rem/1.5  'Jost', sans-serif;
+    background: url('../img/background.jpg') no-repeat;
+}
+
+
+nav {
+    z-index: 10000;
+}
+
+nav.scrolled {
+    @apply bg-white;
+    @apply shadow-2xl;
+    border-bottom: 0px;
+}
