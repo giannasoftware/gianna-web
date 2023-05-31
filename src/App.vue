@@ -1,7 +1,12 @@
 <template>
-  <NavBar :className="{ 'scrolled': !view.atTopOfPage }"  />
+  <!-- Header Navigation-->
+  <NavBar :className="{ 'scrolled': !view.atTopOfPage}"  />
 
   <router-view />
+
+  <!-- Footer -->
+  <Footer/>
+
 </template>
 
 
@@ -10,6 +15,7 @@
 import { onBeforeMount, reactive } from 'vue';
 
 import NavBar from './components/NavBar';
+import Footer from './components/Footer'
 
 onBeforeMount(() => {
   window.addEventListener('scroll', handleScroll);
