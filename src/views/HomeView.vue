@@ -22,19 +22,15 @@
   <!-- Products-->
   <PageSection title="Our Products" link="/shop">
     <template #content>
-      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3 xl:gap-x-8">
-        
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2 md:grid-cols-3 xl:gap-x-8">
           <GridView v-for="item in items" :item="item" key="item.id"/>
-        
-        <!-- <GridView/>
-        <GridView/> -->
       </div>
     </template>
   </PageSection>
 
   <!-- CTAs -->
   <div class="md:container mb-20">
-    <div class="grid grid-cols- md:grid-cols-2 gap-x-4 py-16 gap-y-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 py-16 gap-y-5">
       <CTA colors="bg-[#E2B7B1]"/>
       <CTA colors="bg-[#346646]"/>
     </div>

@@ -1,12 +1,12 @@
 <template lang="">
   <div
-    class="fixed bottom-0 w-full px-6 py-4 shadow-xl bg-inverse-secondary z-50 md:hidden"
+    class="fixed bottom-0 left-0 right-0 px-6 py-4 shadow-xl bg-inverse-secondary z-50 md:hidden"
   >
     <div class="flex flex-1 items-center justify-between space-x-4 text-2xl">
       <router-link to="/"><i class="bx bx-home"></i></router-link>
       <button @click="$emit('openSearch')"><i class="bx bx-search"></i></button>
       <router-link to="/account"><i class="bx bx-user"></i></router-link>
-      <Button @click.prevent="$emit('openSidebar')"><i class="bx bx-menu"></i></Button>
+      <Button @click.prevent="$emit('openSidebar')" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation"><i class="bx bx-menu"></i></Button>
     </div>
   </div>
 

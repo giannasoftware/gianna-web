@@ -1,8 +1,9 @@
 <template>
     <Transition name="fade" enter-active-class="animate__animated animate__slideInRight"
         leave-active-class="animate__animated animate__slideOutRight" :duration="{ enter: 500, leave: 800 }">
-        <aside class="md:hidden" v-show="isActive">
-            <div class="fixed right-0 bottom-0 top-0 h-[663px] w-60 z-10 py-8 space-y-2 font-bold bg-white px-4 pb-3 pt-2">
+        <aside class="relative md:hidden" v-show="isActive">
+            <div class="fixed inset-0 bg-black bg-opacity-25"></div>
+            <div class="fixed inset-0 right-0 bottom-0 top-0 h-[663px] w-60 z-10 py-8 space-y-2 font-bold bg-white px-4 pb-3 pt-2 transition-transform">
                 <div class="flex flex-col items-start mb-5">
                     <div class="flex flex-1 items-center justify-between w-full py-1">
                         <route-link to="/cart" class="inline-flex px -1 py-3">

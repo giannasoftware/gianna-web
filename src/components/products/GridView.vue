@@ -14,10 +14,10 @@
                     class="absolute bottom-4 py-3 px-3 md:px-6 w-full flex flex-1 items-center justify-between group-content">
                     <div class="flex items-start flex-col py-2">
                         <RouterLink to="/shop"
-                            class="title text-sm md:text-lg text-white font-medium group-hover:text-primary">{{ item.title }}
+                            class="title text-sm md:text-lg text-white font-medium group-hover:text-slate-50">{{ item.title }}
                         </RouterLink>
-                        <p class="rating text-orange-400 text-sm mb-2 ml-1 flex items-center">
-                            <i class="bx bxs-star "></i> <span class="ml-1 text-white">({{ item.review_count }}
+                        <p class="rating text-orange-400 text-sm mb-2 flex items-center">
+                            <i class="bx bxs-star text-lg"></i> <span class="ml-1 text-white">({{ item.review_count }}
                                 reviews)</span>
                         </p>
                         <h3 class="text-sm md:text-2xl text-white font-semibold">{{ item.price }}</h3>

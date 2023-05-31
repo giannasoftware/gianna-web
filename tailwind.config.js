@@ -1,6 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,vue,jsx,html}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,vue,jsx,html}",
+    "./node_modules/flowbite/**/*.js",
+  ],
+  safelist: [
+    "w-64",
+    "w-1/2",
+    "rounded-l-lg",
+    "rounded-r-lg",
+    "bg-gray-200",
+    "grid-cols-4",
+    "grid-cols-7",
+    "h-6",
+    "leading-6",
+    "h-9",
+    "leading-9",
+    "shadow-lg",
+  ],
   theme: {
     // screens: {
     //   sm: "567px",
@@ -19,30 +37,28 @@ module.exports = {
     },
     extend: {
       colors: {
-        'primary': 'hsl(326, 93%, 61%)',
-        'inverse-primary': 'hsl(326, 91%, 77%)',
-        'inverse-primary-400': 'hsl(326, 100%, 97%)',
-        'secondary':'hsl(39, 87%, 94%)',
-        'inverse-secondary': 'hsl(42, 62%, 96%)',
-        'black': 'hsl(0, 0%, 22%)',
-        'black-90': 'hsl(220, 2%, 38%,)',
-        'brightPale': 'hsl(7, 46%, 79%)'
-
+        primary: "hsl(326, 93%, 61%)",
+        "inverse-primary": "hsl(326, 91%, 77%)",
+        "inverse-primary-400": "hsl(326, 100%, 97%)",
+        secondary: "hsl(39, 87%, 94%)",
+        "inverse-secondary": "hsl(42, 62%, 96%)",
+        black: "hsl(0, 0%, 22%)",
+        "black-90": "hsl(220, 2%, 38%,)",
+        brightPale: "hsl(7, 46%, 79%)",
       },
-      fontFamily:{
-        Cormorant: ['Cormorant Upright', 'serif']
+      fontFamily: {
+        Cormorant: ["Cormorant Upright", "serif"],
       },
-      letterSpacing:{
-        'sm': ' 0.4rem',
-        'xl': '1.813rem'
+      letterSpacing: {
+        sm: " 0.4rem",
+        xl: "1.813rem",
       },
-      fontSize:{
-        '10': '10px',
-        '11': '11px',
-        '12': '12px',
+      fontSize: {
+        10: "10px",
+        11: "11px",
+        12: "12px",
       },
-      
-    }, 
+    },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
