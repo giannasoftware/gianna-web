@@ -5,7 +5,9 @@
 
 body{
     font: 400 1rem/1.5  'Jost', sans-serif;
-    background: url('../img/background.jpg') no-repeat;
+    background: url('../img/background.jpg') no-repeat ;
+    background-size: cover;
+    width: 100%;
 }
 
 

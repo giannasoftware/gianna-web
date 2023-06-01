@@ -14,8 +14,8 @@
             <div class="inline-flex flex-col px-2 items-start gap-y-5">
                 <h4 class="text-xl text-black font-semibold">Company</h4>
                 <div class="flex flex-col space-y-2">
-                    <router-link :to="{name:home}" class="text-base text-gray-600 hover:text-black transition duration-300">Home</router-link>
-                    <router-link :to="{name: about}" class="text-base text-gray-600 hover:text-black transition duration-300">History</router-link>
+                    <router-link :to="{name:'home'}" class="text-base text-gray-600 hover:text-black transition duration-300">Home</router-link>
+                    <router-link :to="{name: 'about'}" class="text-base text-gray-600 hover:text-black transition duration-300">History</router-link>
                     <router-link :to="{name: 'product-list'}" class="text-base text-gray-600 hover:text-black transition duration-300">Shop</router-link>
                     <router-link :to="{name: 'press'}" class="text-base text-gray-600 hover:text-black transition duration-300">Press</router-link>
                 </div>

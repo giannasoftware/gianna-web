@@ -19,7 +19,7 @@ const routes = [
   },
   {
     path: '/shop/:name',
-    name: 'single-product',
+    name: 'product',
     component: () => import(/* webpackChunkName: "about" */ '../views/SingleProduct.vue')
   },
   {

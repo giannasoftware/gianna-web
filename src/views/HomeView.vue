@@ -30,7 +30,7 @@
 
   <!-- CTAs -->
   <div class="md:container mb-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 py-16 gap-y-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 py-10 gap-y-5">
       <CTA colors="bg-[#E2B7B1]"/>
       <CTA colors="bg-[#346646]"/>
     </div>
