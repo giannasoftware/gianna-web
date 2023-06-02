@@ -1,8 +1,8 @@
 <template>
-    <div class="border-b border-gray-200 py-6 bg-white">
-        <h3 class="-mx-2 -my-3 flow-root">
+    <div class="border-b border-gray-200 py-6 px-2 bg-white">
+        <h3 class="-mx-1 -my-3 flow-root text-lg">
             <button type="button"
-                class="flex w-full items-center justify-between py-3 text-gray-400 hover:text-gray-500 px-4"
+                class="flex w-full items-center justify-between py-3 text-gray-400 hover:text-gray-500 px-4 border-b-1 border-gray-300"
                 aria-controls="filter-section-mobile-0" aria-expanded="false" @click.prevent="openFilter">
                 <span class="font-medium text-gray-900">{{ name }}</span>
                 <span class="ml-5 flex items-center">
@@ -26,11 +26,11 @@
 import { ref } from 'vue';
 
 
-defineProps(['name'])
+const props = defineProps(['name', 'open'])
 
 // defineEmits(['openFilter']);
 
-const isExpanded = ref(false)
+const isExpanded = ref(props.open)
 
 const openFilter = () => {
     isExpanded.value = !isExpanded.value

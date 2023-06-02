@@ -37,14 +37,18 @@ module.exports = {
     },
     extend: {
       colors: {
+        black: "hsl(0, 0%, 22%)",
+        secondary: "hsl(39, 87%, 94%)",
         primary: "hsl(326, 93%, 61%)",
+        blue: 'hsla(205, 89%, 50%, 1)',
+        purple: 'hsla(248, 69%, 55%, 1)',
+        yellow: 'hsl(43, 98%, 62%)',
+        green: 'hsl(142, 32%, 30%)',
+        brightPale: "hsl(7, 46%, 79%)",
         "inverse-primary": "hsl(326, 91%, 77%)",
         "inverse-primary-400": "hsl(326, 100%, 97%)",
-        secondary: "hsl(39, 87%, 94%)",
         "inverse-secondary": "hsl(42, 62%, 96%)",
-        black: "hsl(0, 0%, 22%)",
         "black-90": "hsl(220, 2%, 38%,)",
-        brightPale: "hsl(7, 46%, 79%)",
       },
       fontFamily: {
         Cormorant: ["Cormorant Upright", "serif"],

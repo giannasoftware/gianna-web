@@ -62,7 +62,7 @@
             <div class="grid grid-cols-1 gap-x-8 gap-y-6" :class="{'lg:grid-cols-4': showX}">
                 <!-- Left -->
                 <div v-show="showX" class="hidden md:inline">
-                    <FilterMenu name="Category" class="bg-white">
+                    <FilterMenu name="Category" class="bg-white" :open="true">
                         <template #filterMenu>
                             <CheckBox name="category[]" label="travel" />
                             <CheckBox name="category[]" label="category 2" />

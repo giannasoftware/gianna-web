@@ -9,7 +9,7 @@
                 <div
                     class="aspect-h-4 aspect-w-3 overflow-hidden shrink-0 cursor-pointer bg-gray-200 lg:aspect-none group-hover:opacity-75">
                     <img :src="item.image.isArray ? item.image[0] : item.image" :alt="item.title"
-                        class="h-[270px] md:h-full">
+                        class="h-[270px] object-cover object-center md:h-full">
                     <!-- <img :src="item.image.isArray ? item.image[1] : item.image" :alt="item.title" class="h-full hidden" :class="{'group-hover:block': item.image.isArray}"> -->
                 </div>
                 <!-- Detail -->
@@ -17,7 +17,7 @@
                     class="absolute bottom-2 py-1 md:bottom-4 md:py-3 px-3 md:px-6 w-full flex flex-1 justify-between group-content items-end md:items-center">
 
                     <div class="flex items-start flex-col md:py-2">
-                        <RouterLink :to="{name: 'product', params:{name: item.title.replaceAll(' ', '-').toLowerCase()}}"
+                        <RouterLink :to="{name: 'product', params:{name: item.title.replaceAll(' ', '-').toLowerCase(), id: item.id}}" :item="item"
                             class="title text-sm md:text-lg text-white font-medium group-hover:text-slate-50">{{ item.title
                             }}
                         </RouterLink>
