@@ -1,7 +1,7 @@
 <template>
     
     <div class="container py-6 space-y-10">
-        <div class="grid grid-cols-2 gap-x-4 gap-y-10 md:flex md:justify-between md:w-full md:items-start md:gap-x-0">
+        <div class="grid grid-cols-2 gap-x-6 gap-y-10 md:flex md:justify-between md:w-full md:items-start md:gap-x-0">
             <div class="inline-flex items-start px-2 flex-col space-y-3">
                 <router-link to="/" class="pt-2"><img src="../assets/img/logo.png" alt=""></router-link>
                 <div class="grid grid-cols-4 items-center gap-4">

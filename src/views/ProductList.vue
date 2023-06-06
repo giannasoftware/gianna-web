@@ -9,8 +9,8 @@
             <div class="relative pb-8">
                 <div class="flex justify-between items-baseline">
                     <button @click="handleFilter"
-                        class="py-3 inline-flex gap-x-1 items-center text-gray-600 text-lg hover:text-black cursor-pointer">
-                        <span class="bx bx-filter text-3xl"></span>
+                        class="py-3 inline-flex gap-x-1 items-center text-gray-600 text-sm hover:text-black cursor-pointer">
+                        <span class="bx bx-filter text-sm"></span>
                         <h3 class="font-medium">Filter</h3>
                         <span class="bx bx-x transition-transform ease-in-out duration-200 text-red-500 ml-4"
                             :class="{ 'hidden': !showX }"></span>

@@ -22,7 +22,7 @@
   <!-- Products-->
   <PageSection title="Our Products" link="/shop">
     <template #content>
-      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2 md:grid-cols-3 xl:gap-x-8">
+      <div class="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-2 md:grid-cols-3 xl:gap-x-8">
           <GridView v-for="item in items" :item="item" key="item.id"/>
       </div>
     </template>
