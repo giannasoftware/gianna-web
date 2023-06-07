@@ -12,13 +12,13 @@
                 <div class="flex items-center">
                     <span class="bx bxs-chevron-right text-gray-500"></span>
                     <a href="#"
-                        class="ml-1 text-base font-normal text-gray-600 hover:text-primary md:ml-2 dark:text-gray-500 dark:hover:text-black">{{page}}</a>
+                        class="ml-1 text-base font-normal capitalize text-gray-600 hover:text-primary md:ml-2 dark:text-gray-500 dark:hover:text-black">{{page}}</a>
                 </div>
             </li>
             <li aria-current="page" v-if="subpage">
                 <div class="flex items-center">
                    <span class="bx bxs-chevron-right text-gray-00"></span>
-                    <span class="ml-1 text-base font-medium md:ml-2 dark:text-black">{{subpage}}</span>
+                    <span class="ml-1 text-base font-medium md:ml-2 dark:text-black capitalize">{{subpage}}</span>
                 </div>
             </li>
         </ol>

@@ -43,7 +43,7 @@
                             <button class="font-medium leading-6" @click="handleSearch">
                                 <i class="bx bx-search"></i>
                             </button>
-                            <router-link to="/about" class="font-medium leading-6"><i class="bx bx-user"></i></router-link>
+                            <router-link to="/account/login" class="font-medium leading-6"><i class="bx bx-user"></i></router-link>
                             <router-link to="/shop/cart" class="relative flex items-center leading-6 font-medium">
                                 <i class="bx bx-shopping-bag"></i>
                                 <span class="text-12 ml-0.5">$200</span>

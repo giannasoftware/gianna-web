@@ -39,11 +39,6 @@ module.exports = {
     extend: {
       screens: {
         xs:{max: '320px'}
-        // sm: "567px",
-        // md: "768px",
-        // lg: "1025px",
-        // xl: "1280px",
-        // '2xl': "1440px",
       }
       ,
       colors: {

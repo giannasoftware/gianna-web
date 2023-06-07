@@ -16,7 +16,8 @@ const routes = [
   {
     path: '/shop',
     name: 'product-list',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ProductList.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProductList.vue'),
+    props: true
   },
   {
     path: '/shop/:name',
@@ -36,7 +37,22 @@ const routes = [
   {
     path: '/press',
     name: 'press',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SingleProduct.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/BlogPosts')
+  },
+  {
+    path: '/account/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Login')
+  },
+  {
+    path: '/account/create-account',
+    name: 'signUp',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SignUp')
+  },
+  {
+    path: '/account/forget-password',
+    name: 'forget-password',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ForgetPassword')
   },
 ]
 
