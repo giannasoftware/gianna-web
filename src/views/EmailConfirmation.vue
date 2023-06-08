@@ -9,7 +9,7 @@
                     <div class="shrink-0 overflow-hidden hidden md:block">
                         <img src="../assets/img/banner-2.png" class="h-full">
                     </div>
-                    <div class="flex flex-col items-start justify-center px-5 py-5">
+                    <div class="flex flex-col items-start justify-center px-5 py-10 md:py-5">
                         <!-- description -->
                         <div class="block mb-6">
                             <h3 class="text-2xl text-black font-bold">A confirmation code

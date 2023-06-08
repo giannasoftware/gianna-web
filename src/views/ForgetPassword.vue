@@ -9,20 +9,26 @@
                     <div class="shrink-0 overflow-hidden hidden md:block">
                         <img src="../assets/img/banner-2.png" class="h-full">
                     </div>
-                    <div class="flex flex-col items-start justify-center px-5 py-5">
+                    <div class="flex flex-col items-start justify-center px-5 py-10 md:py-5">
                         <!-- description -->
                         <div class="block mb-6">
                             <h4 class="text-lg text-black font-medium">Forgot Password?</h4>
                             <h3 class="text-2xl text-black font-bold">A reset link will be sent to you</h3>
                         </div>
                         <!-- form -->
-                        <div class="form-group w-full mb-3">
-                            <input type="email" v-model="email" placeholder="Email address" class="w-full border-gray-200 placeholder:text-gray-300 placeholder:capitalize text-base focus:border-0 focus:outline-0 focus:ring-stone-400">
-                        </div>
+                        <InputBox label="Email address" v-model="formData.userEmail" type="email">
+                            <span class="text-red-500 text-sm pt-2" v-for="error in v$.userEmail.$errors" :key="error.$uid" v-if="v$.userEmail.$model">
+                                {{ error.$message }}
+                            </span>
+                        </InputBox>
 
                         <div class="flex items-center flex-col w-full">
-                            <button type="submit" class="bg-primary text-white text-center w-full py-2 mt-5 mb-3 hover:border-primary hover:border transition duration-200">Reset Password</button>
-                            <p class="text-center text-gray-500 text-sm ">Back to <RouterLink :to="{name:'login'}" class="text-black font-medium">Login</RouterLink></p>
+                            <button type="submit"
+                                class="bg-primary text-white text-center w-full py-2 mt-2 mb-3 hover:border-primary hover:border transition duration-200">Reset
+                                Password</button>
+                            <p class="text-center text-gray-500 text-sm ">Back to <RouterLink :to="{ name: 'login' }"
+                                    class="text-black font-medium">Login</RouterLink>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -33,4 +39,16 @@
 
 <script setup>
 import Breadcrumb from '@/components/nav/Breadcrumb';
+import InputBox from '@/components/form/InputBox';
+import { formValidator } from '@/composables/formValidator'
+import { ref } from 'vue';
+
+
+// let email = ref('')
+
+// form validation
+const { formData, result, v$ } = formValidator()
+
+
+
 </script>

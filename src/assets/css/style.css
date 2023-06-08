@@ -1058,6 +1058,10 @@ input:checked + .toggle-bg {
   inset: 0px;
 }
 
+.\!right-0 {
+  right: 0px !important;
+}
+
 .-bottom-1 {
   bottom: -0.25rem;
 }
@@ -1160,10 +1164,6 @@ input:checked + .toggle-bg {
 
 .col-span-2 {
   grid-column: span 2 / span 2;
-}
-
-.col-span-1 {
-  grid-column: span 1 / span 1;
 }
 
 .-m-0 {
@@ -1503,6 +1503,10 @@ input:checked + .toggle-bg {
   width: 2rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .w-\[36\.0625rem\] {
   width: 36.0625rem;
 }
@@ -1513,22 +1517,6 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-80 {
-  width: 20rem;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .max-w-2xl {
@@ -1549,22 +1537,6 @@ input:checked + .toggle-bg {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-5xl {
-  max-width: 64rem;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
-.max-w-6xl {
-  max-width: 72rem;
 }
 
 .flex-1 {
@@ -1730,10 +1702,6 @@ input:checked + .toggle-bg {
   gap: 1rem;
 }
 
-.gap-20 {
-  gap: 5rem;
-}
-
 .gap-x-0 {
   -moz-column-gap: 0px;
        column-gap: 0px;
@@ -1792,11 +1760,6 @@ input:checked + .toggle-bg {
 
 .gap-y-6 {
   row-gap: 1.5rem;
-}
-
-.gap-x-10 {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
@@ -2334,10 +2297,6 @@ input:checked + .toggle-bg {
   padding-right: 0.5rem;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -2820,10 +2779,6 @@ nav.scrolled {
   border-width: 2px;
 }
 
-.hover\:border-r:hover {
-  border-right-width: 1px;
-}
-
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -2956,11 +2911,6 @@ nav.scrolled {
 .focus\:ring-indigo-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(104 117 245 / var(--tw-ring-opacity));
-}
-
-.focus\:ring-stone-500:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(120 113 108 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-stone-400:focus {
@@ -3415,6 +3365,11 @@ nav.scrolled {
   .md\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 
   .md\:py-8 {

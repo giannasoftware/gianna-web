@@ -71,8 +71,9 @@
             <!-- mobile-cart -->
         </div>
     </nav>
+
     <MobileNav @openSidebar="handleShowMenu" @openSearch="handleSearch"/>
-    <div class="relative">
+    <!-- <div class="relative"> -->
         <SideBar :isActive="showMenu" @close="handleShowMenu">
             <template #menu>
                 <li>
@@ -133,7 +134,7 @@
                 </div>
             </template>
         </SideBar>
-    </div>
+    <!-- </div> -->
 
   <SearchBox :open="isSearch" @close="handleSearch"/>
 
