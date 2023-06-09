@@ -40,11 +40,8 @@
 <script setup>
 import Breadcrumb from '@/components/nav/Breadcrumb';
 import InputBox from '@/components/form/InputBox';
-import { formValidator } from '@/composables/formValidator'
-import { ref } from 'vue';
+import formValidator from '@/composables/formValidator'
 
-
-// let email = ref('')
 
 // form validation
 const { formData, result, v$ } = formValidator()

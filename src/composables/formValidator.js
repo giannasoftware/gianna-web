@@ -1,14 +1,21 @@
 import { useVuelidate } from "@vuelidate/core";
-import { required, email, minLength, helpers } from "@vuelidate/validators";
+import { required, email, minLength, helpers, numeric } from "@vuelidate/validators";
 import { watchEffect, computed , reactive} from "vue";
 
-export function formValidator() {
+const formValidator = () => {
 
   const formData = reactive({
-    fname: '',
-    lname: '',
-    userEmail: '',
-    password: '',
+    fname: undefined,
+    lname: undefined,
+    userEmail: undefined,
+    password: undefined,
+    phoneNumber: undefined,
+    apartment: undefined,
+    address: undefined,
+    countryCode: undefined,
+    postalCode: undefined,
+    city: undefined,
+    state: undefined
 })
 
   // rules
@@ -38,6 +45,15 @@ export function formValidator() {
           minLength(8)
         ),
       },
+      phoneNumber: {
+        required: helpers.withMessage('Your phone number is required', required),
+        numeric
+      },
+      countryCode:{required},
+      address:{required},
+      city: {required},
+      state: {required},
+      postalCode: {required}
     };
   });
 
@@ -53,3 +69,6 @@ export function formValidator() {
 
   return { formData, result, v$ };
 }
+
+
+export default formValidator

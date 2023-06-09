@@ -18,7 +18,7 @@
                         <!-- form -->
                         <InputBox label="Email Address" v-model="formData.userEmail" type="email">
                             <span class="text-red-500 text-sm pt-2" v-for="error in v$.userEmail.$errors" :key="error.$uid"
-                                v-if="formData.email">
+                                v-if="formData.userEmail">
                                 {{ error.$message }}
                             </span>
                         </InputBox>
@@ -57,7 +57,7 @@
 import CheckBox from '@/components/form/CheckBox.vue';
 import InputBox from '@/components/form/InputBox.vue';
 import Breadcrumb from '@/components/nav/Breadcrumb';
-import { formValidator } from '@/composables/formValidator'
+import formValidator from '@/composables/formValidator'
 import { reactive } from 'vue';
 
 // form data

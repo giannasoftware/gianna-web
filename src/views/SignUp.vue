@@ -17,24 +17,28 @@
                         <!-- form -->
                         <div class="grid md:grid-cols-2 items-center gap-x-4 w-full">
                             <InputBox label="First Name" v-model="v$.fname.$model" type="text">
-                                <span class="text-red-500 text-sm pt-2" v-for="error in v$.fname.$errors" :key="error.$uid" v-if="v$.fname.$model">
+                                <span class="text-red-500 text-sm pt-2" v-for="error in v$.fname.$errors" :key="error.$uid"
+                                    v-if="v$.fname.$model">
                                     {{ error.$message }}
                                 </span>
                             </InputBox>
                             <InputBox label="Last Name" v-model="formData.lname" type="text">
-                                <span class="text-red-500 text-sm pt-2" v-for="error in v$.lname.$errors" :key="error.$uid" v-if="formData.lname">
+                                <span class="text-red-500 text-sm pt-2" v-for="error in v$.lname.$errors" :key="error.$uid"
+                                    v-if="formData.lname">
                                     {{ error.$message }}
                                 </span>
                             </InputBox>
                         </div>
                         <InputBox label="Email Address" v-model="v$.userEmail.$model" type="email">
-                            <span class="text-red-500 text-sm pt-2" v-for="error in v$.userEmail.$errors" :key="error.$uid"  v-if="v$.userEmail.$model">
+                            <span class="text-red-500 text-sm pt-2" v-for="error in v$.userEmail.$errors" :key="error.$uid"
+                                v-if="v$.userEmail.$model">
                                 {{ error.$message }}
                             </span>
                         </InputBox>
 
                         <InputBox label="Password" v-model="formData.password" type="password">
-                            <span class="text-red-500 text-sm pt-2" v-for="error in v$.password.$errors" :key="error.$uid" v-if="v$.password.$model">
+                            <span class="text-red-500 text-sm pt-2" v-for="error in v$.password.$errors" :key="error.$uid"
+                                v-if="v$.password.$model">
                                 {{ error.$message }}
                             </span>
                         </InputBox>
@@ -42,8 +46,8 @@
                         <div class="flex items-center flex-col w-96">
                             <button type="submit" @click.prevent="handleForm"
                                 class="bg-primary text-white text-center w-full py-2 mb-3 hover:bg-transparent hover:text-primary hover:border-primary hover:border transition duration-200">
-                                Sign
-                                in</button>
+                                Create account
+                            </button>
                             <p class="text-center text-gray-500 text-sm "> Already have an account? <RouterLink
                                     :to="{ name: 'login' }" class="text-black font-medium">Login</RouterLink>
                             </p>
@@ -59,15 +63,15 @@
 <script setup>
 import Breadcrumb from '@/components/nav/Breadcrumb';
 import InputBox from '@/components/form/InputBox.vue';
-import { formValidator } from '@/composables/formValidator'
+import formValidator from '@/composables/formValidator'
 
 
 // form validation
-const {formData, result, v$ } = formValidator()
+const { formData, result, v$ } = formValidator()
 
 
-async function handleForm(){
-    if(!result){
+async function handleForm() {
+    if (!result) {
         console.log('submited')
     }
 }
