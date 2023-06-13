@@ -30,9 +30,9 @@
                         </div>
                         <InputBox class="w-full mb-5" label="Subject" v-modal="data.subject" />
                         <textarea placeholder="Message"
-                            class="w-full border-gray-300 placeholder:text-gray-300 placeholder:capitalize text-base focus:border-0 focus:outline-0 focus:ring-stone-400 h-52"
+                            class="w-full mb-5 border-gray-300 placeholder:text-gray-300 placeholder:capitalize text-base focus:border-0 focus:outline-0 focus:ring-stone-400 h-52"
                             v-model="data.message"></textarea>
-
+                        <ButtonPrimary label="submit message" class="max-w-max px-6 py-2 uppercase text-sm shadow-sm"/>
                     </form>
                     <div class="bg-secondary py-10 w-96 px-6">
                         <h3 class="text-2xl text-black font-bold tracking-wider mb-10">Contact Info</h3>
@@ -64,6 +64,7 @@
 <script setup>
 import InputBox from '@/components/form/InputBox.vue';
 import Breadcrumb from '@/components/nav/Breadcrumb'
+import ButtonPrimary from '@/components/utilities/ButtonPrimary.vue';
 import { reactive, ref } from 'vue';
 
 const data = reactive({
