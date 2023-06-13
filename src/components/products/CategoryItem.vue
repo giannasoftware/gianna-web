@@ -2,14 +2,14 @@
 
     <route-link :to="item.link" class="group relative">
         <div
-            class="rounded-t-[45px] aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:hmd-80">
+            class="rounded-tr-[45px] aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:hmd-80">
             <img :src="item.image"
                 :alt="item.title"
                 class="h-full w-full object-cover object-center lg:h-full lg:w-full">
         </div>
-        <div class="mt-4 flex flex-col space-y-1 absolute bottom-2 pb-3">
+        <div class="mt-4 flex flex-col absolute bottom-1 pb-3">
             <div class="pl-4">
-                <h3 class="text-xl text-gray-700 mb-0">
+                <h3 class="text-lg text-black mb-0 font-medium">
                     <route-link :to="item.link">
                         <span aria-hidden="true" class="absolute inset-0"></span>
                         {{item.title}}

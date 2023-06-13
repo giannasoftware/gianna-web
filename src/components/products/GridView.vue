@@ -4,7 +4,7 @@
 
             <div :to="{name: 'product', params:{name: item.title.toLowerCase().replaceAll(' ', '-')}}" class="relative flex flex-col items-start">
                 <div
-                    class="absolute inset-0 bg-gradient-to-t from-gray-600 to-100% bg-opacity-50 transition-opacity w-full h-full">
+                    class="absolute inset-0 bg-gradient-to-t from-black to-60% bg-opacity-10 transition-opacity w-full h-full">
                 </div>
                 <div
                     class="aspect-h-4 aspect-w-3 overflow-hidden shrink-0 cursor-pointer bg-gray-200 lg:aspect-none group-hover:opacity-75">

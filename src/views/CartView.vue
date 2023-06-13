@@ -5,9 +5,9 @@
             <Breadcrumb page="Shop" subpage="Cart" />
 
             <!-- Cart container -->
-            <div class="gap-x-6 gap-y-5 flex flex-col md:flex-row pt-10">
+            <div class="gap-x-6 gap-y-5 flex flex-col lg:flex-row pt-10">
 
-                <div class="bg-white w-full md:max-w-4xl shadow col-span-2 px-5 py-6">
+                <div class="bg-white w-full md:max-w-max lg:max-w-4xl shadow col-span-2 px-5 py-6">
                     <div class="border-b-2 border-gray-100 pb-3">
                         <h3 class="text-lg md:text-xl font-semibold text-black">Cart</h3>
                     </div>
@@ -201,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white w-full md:h-[500px] lg:w-3/12 shadow px-6 py-6">
+                <div class="bg-white w-full md:h-[500px] md:w-1/2 md:self-end lg:w-2/4 xl:w-1/4 lg:self-auto shadow px-6 py-6">
                     <div class="border-b-2 border-gray-100 pb-3">
                         <h3 class="text-lg md:text-2xl font-semibold text-black">Cart Summary</h3>
                     </div>

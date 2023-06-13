@@ -16,7 +16,7 @@
                 </router-link>
                 <!-- </div> -->
             </div>
-            <div class="shrink-0 md:-mr-40 w-100 md:w-80 md:-mb-20">
+            <div class="shrink-0 md:-mr-40 w-100 md:w-80 md:-mb-20 border-0">
                 <img src="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                     alt="" class="w-full h-full object-cover object-center">
             </div>

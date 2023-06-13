@@ -118,18 +118,19 @@
 
                         <div class="form">
 
-                            <RadioBox v-model="paymentType" :className="['mb-3']" option="paypal"
-                                v-for="option in valueOptions" :key="option" :label="option.label" :option="option.value">
-                                <template #payment>
-                                    <div v-if="option.value == 'card'" class="mt-4">
+                            <RadioBox v-model="paymentType" :className="['mb-3']" v-for="option in valueOptions"
+                                :key="option" :label="option.label" :option="option.value" name="paymentType">
+                                <template #payment v-if="option.value === 'card'">
+                                    <div class="mt-4"  v-if="paymentType === 'card'"
+                                        >
                                         <InputBox label="Card Number" name="cardNumber"></InputBox>
                                         <div class="flex flex-col items-center md:flex-row gap-x-6 gap-y-5">
                                             <InputBox label="Expire Date" name="cardExp"></InputBox>
-
-                                            <InputBox label="cvv" name="cardCvv" class="!lowercase"></InputBox>
+                                            <InputBox label="cvv" name="cardCvv"></InputBox>
                                         </div>
                                     </div>
                                 </template>
+                                <template #payment v-else></template>
                             </RadioBox>
 
                             {{ paymentType }}
@@ -146,15 +147,13 @@
                     <!-- container -->
                     <div class="flex flex-col gap-y-4 py-6 items-center">
                         <!-- shipping method -->
-                        <div class="grid grid-rows-2 md:grid-cols-2 gap-x-3 gap-y-2 items-center w-52 md:w-72">
-                            <button
-                                class="bg-primary text-white text-sm px-4 py-2 font-medium hover:bg-inverse-primary hover:transition-shadow hover:text-gray-50 hover:shadow duration-150">Free</button>
-                            <button
-                                class="bg-transparent text-black text-sm px-3 py-2 font-medium hover:bg-inverse-primary hover:transition-shadow hover:text-gray-50 hover:shadow duration-150">Express:
-                                $9.99</button>
+                        <div class="inline-flex gap-x-3 gap-y-5 md:g-y-2 items-center justify-center w-full pb-10">
+                            <ShippingTypeRadio inputLabel="Free" inputId="free-shipping" inputValue="free" v-model="shipping" name="shippingType"/>
+                            <ShippingTypeRadio inputLabel="Express $9.99" inputId="express-shipping" inputValue="express" v-model="shipping" name="shippingType"/>
                         </div>
 
                         <div class="block self-start">
+
                             <div
                                 class="inline-flex flex-1 items-center gap-x-4 mb-6 border-b-2 border-gray-200 pb-3 w-full">
                                 <div class="w-16 h-16">
@@ -207,11 +206,11 @@
                         </div>
 
                         <!-- Price Summary -->
-                        <PriceSummary subtotal="100" delivery="10" currency="$" />
+                        <PriceSummary subtotal=100 delivery=10 currency="$" />
 
 
 
-                        <ButtonPrimary label="Pay Now" @click="(() => console.log('clicked'))"/>
+                        <ButtonPrimary label="Pay Now" @click="(() => console.log('clicked'))" />
 
                     </div>
                 </div>
@@ -226,11 +225,21 @@ import Breadcrumb from '@/components/nav/Breadcrumb';
 import RadioBox from '@/components/form/RadioBox'
 import PriceSummary from '@/components/cart/PriceSummary';
 import formValidator from '@/composables/formValidator';
-import ButtonPrimary from '@/components/ButtonPrimary';
+import ButtonPrimary from '@/components/utilities/ButtonPrimary';
 import { ref } from 'vue'
+import ShippingTypeRadio from '@/components/form/ShippingTypeRadio.vue';
 
 const paymentType = ref(null)
 const valueOptions = [{ value: 'card', label: 'Debit/credit card' }, { value: 'paypal', label: 'PayPal' }, { value: 'applePay', label: 'Apple Pay' }]
 // validate form
 const { formData, result, v$ } = formValidator()
+
+const shipping = ref('')
+
 </script>
+
+
+<style>
+.slot.active {
+    display: block;
+}</style>
