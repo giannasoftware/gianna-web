@@ -39,8 +39,7 @@ module.exports = {
     extend: {
       screens: {
         xs:{max: '320px'}
-      }
-      ,
+      },
       colors: {
         black: "hsl(0, 0%, 22%)",
         secondary: "hsl(39, 87%, 94%)",
@@ -67,6 +66,7 @@ module.exports = {
         11: "11px",
         12: "12px",
       },
+      
     },
   },
   plugins: [require("flowbite/plugin")],

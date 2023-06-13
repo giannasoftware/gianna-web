@@ -5,28 +5,28 @@
             <Breadcrumb page="Shop" subpage="Woman Cloth" class="py-4" />
 
             <!-- Product Details -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 bg-white">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-0">
                 <!-- images -->
-                <div class="relative">
-                    <div class="aspect-h-4 aspect-w-3 overflow-hidden"> 
+                <div class="relative bg-white">
+                    <div class="aspect-h-4 aspect-w-3 overflow-hidden">
                         <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
                             alt="Two each of gray, white, and black shirts laying flat."
                             class="w-full object-cover object-center">
 
-                            <div class="absolute left-5 space-y-2 top-80">
-                                <button class="capitalize block">description</button>
-                                <button class="capitalize block">reviews</button>
-                                <button class="capitalize block">FAQs</button>
-                            </div>
+                        <div class="absolute left-5 space-y-2 top-80">
+                            <button class="capitalize block">description</button>
+                            <button class="capitalize block">reviews</button>
+                            <button class="capitalize block">FAQs</button>
+                        </div>
                     </div>
 
                 </div>
 
                 <!-- Product information -->
-                <div class="lg:col-span-2 pt-8 flex justify-between gap-x-7">
+                <div class="lg:col-span-2 flex justify-between gap-x-5 relative">
                     <h2 class="sr-only">Product information</h2>
 
-                    <div class="max-w-xl">
+                    <div class="bg-white pt-8 max-w-xl">
                         <h1 class="text-2xl font-bold tracking-tight text-black sm:text-3xl mt-4 md:mt-0 px-4">
                             Basic Tee 6-Pack
                         </h1>
@@ -46,12 +46,18 @@
                                 <div class="mt-4">
                                     <legend class="sr-only">Select Color</legend>
                                     <div class="flex items-center gap-x-3">
-                                        <ColorBox label="white" />
-                                        <ColorBox label="primary" />
-                                        <ColorBox label="green" />
-                                        <ColorBox label="black" />
+                                        <ColorBox colorLabel="white" colorName="color" colorId="color-white" colorValue="white"
+                                            v-model="selectedColor" />
+                                        <ColorBox colorLabel="primary" colorName="color" colorId="color-primary"
+                                            colorValue="purple" v-model="selectedColor" />
+                                        <ColorBox colorLabel="rose-600" colorName="color" colorId="color-rose-600"
+                                            colorValue="rose" v-model="selectedColor" />
+                                        <ColorBox colorLabel="black" colorName="color" colorId="color-black" colorValue="black"
+                                            v-model="selectedColor" />
                                     </div>
+                                    {{ selectedColor }}
                                 </div>
+
                             </div>
 
                             <div class="mt-10 border-b border-gray-200 pb-6">
@@ -62,22 +68,25 @@
                                 </div>
                                 <div class="mt-4">
                                     <legend class="sr-only">Select Sizes</legend>
-                                    <div class="grid grid-cols-4 lg:grid-cols-7  gap-y-3 gap-x-3">
-                                        <SizeBox label="XXS" />
-                                        <SizeBox label="XS" />
-                                        <SizeBox label="S" />
-                                        <SizeBox label="M" />
-                                        <SizeBox label="L" />
-                                        <SizeBox label="XL" />
-                                        <SizeBox label="XXL" />
-                                        <SizeBox label="XXL" />
+                                    <div class="flex flex-wrap items-center gap-y-5 gap-x-3">
+                                        <SizeBox label="XXS" v-model="selectedSize" />
+                                        <SizeBox label="XS" v-model="selectedSize" />
+                                        <SizeBox label="S" v-model="selectedSize" />
+                                        <SizeBox label="M" v-model="selectedSize" />
+                                        <SizeBox label="L" v-model="selectedSize" />
+                                        <SizeBox label="XL" v-model="selectedSize" />
+                                        <SizeBox label="XXL" v-model="selectedSize" />
+                                        <SizeBox label="XXL" v-model="selectedSize" />
                                     </div>
+
+                                    {{ selectedSize }}
                                 </div>
+
                             </div>
                         </form>
 
 
-                        <FilterMenu name="Description" :open="true" class="border-b-0 sm:!px-0">
+                        <FilterMenu name="Description" :open="true" class="border-b-0 sm:!px-0 w-full">
                             <template #filterMenu>
                                 <div class="md:px-4 font-normal">
                                     <p class="text-gray-600 py-2">
@@ -102,7 +111,7 @@
                     </div>
 
                     <!-- Cart Options -->
-                    <div class="hidden lg:block py-4 w-72 shadow-md px-5 h-96">
+                    <div class="hidden lg:block py-4 w-72 shadow-md px-5 h-96 bg-white">
 
                         <div class="border-b-2 border-gray-200 mb-3 pb-3">
                             <h3 class="text-black text-2xl font-semibold tracking-tight">Set Order</h3>
@@ -139,30 +148,34 @@
 
 
                         <div class="inline-flex space-y-3 flex-col w-full">
-                            <button class="flex items-center py-3 px-2 bg-primary justify-center text-white font-medium hover:border hover:border-primary hover:text-primary hover:bg-transparent">
-                            <span>Add bag</span>
-                            <span class="bx bx-shopping-bag ml-4"></span>
-                        </button>
-                        <button class="flex items-center py-3 px-2 hover:bg-primary justify-center hover:text-white font-medium text-primary border border-primary">
-                            <span>Save item</span>
-                            <span class="bx bx-heart ml-4"></span>
-                        </button>
+                            <button
+                                class="flex items-center py-3 px-2 bg-primary justify-center text-white font-medium hover:border hover:border-primary hover:text-primary hover:bg-transparent">
+                                <span>Add bag</span>
+                                <span class="bx bx-shopping-bag ml-4"></span>
+                            </button>
+                            <button
+                                class="flex items-center py-3 px-2 hover:bg-primary justify-center hover:text-white font-medium text-primary border border-primary">
+                                <span>Save item</span>
+                                <span class="bx bx-heart ml-4"></span>
+                            </button>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
         </div>
     </main>
 </template>
-<script>
+
+<script setup>
 import FilterMenu from '@/components/FilterMenu.vue';
-import ColorBox from '@/components/form/ColorBox.vue';
+import ColorBox from '@/components/form/ChooseColorBox';
 import SizeBox from '@/components/form/SizeBox.vue';
 import Breadcrumb from '@/components/nav/Breadcrumb.vue';
+import { ref } from 'vue';
 
-export default {
-    components: { Breadcrumb, ColorBox, SizeBox, FilterMenu }
-}
+
+const selectedColor = ref('')
+const selectedSize = ref('')
+
 </script>
-==
