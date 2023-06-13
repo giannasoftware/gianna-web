@@ -55,7 +55,12 @@ module.exports = {
         "black-90": "hsl(220, 2%, 38%,)",
       },
       fontFamily: {
-        Cormorant: ["Cormorant Upright", "serif"],
+        Cormorant: ["'Cormorant Upright'", "serif"],
+        Jost: ["'Jost'", 'sans-serif']
+      },
+      fontWeight:{
+        'extrabold': '900',
+        black: '1000'
       },
       letterSpacing: {
         sm: " 0.4rem",

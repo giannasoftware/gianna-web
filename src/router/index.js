@@ -55,6 +55,16 @@ const routes = [
     path: '/account/create-account',
     name: 'signUp',
     component: () => import(/* webpackChunkName: "about" */ '../views/SignUp')
+  }, 
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ContactView')
+  },
+  {
+    path: '/faqs',
+    name: 'faq',
+    component: () => import(/* webpackChunkName: "about" */ '../views/FaqViews')
   },
   {
     path: '/account/forget-password',
