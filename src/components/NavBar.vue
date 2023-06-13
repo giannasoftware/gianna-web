@@ -32,8 +32,8 @@
                                     </template>
                                 </Dropdown>
                             </div>
-                            <router-link to="/about" class="text-sm font-medium leading-6">Collectives</router-link>
-                            <router-link to="/about" class="text-sm font-medium leading-6">Press</router-link>
+                            <router-link :to="{name: 'product-list'}" class="text-sm font-medium leading-6">Collectives</router-link>
+                            <router-link :to="{name: 'press'}" class="text-sm font-medium leading-6">Press</router-link>
                         </div>
                     </div>
 
@@ -77,16 +77,16 @@
         <SideBar :isActive="showMenu" @close="handleShowMenu">
             <template #menu>
                 <li>
-                    <router-link to="#" class="text-gray-600 block  py-1 text-sm">
+                    <router-link :to="{name: 'press'}" class="text-gray-600 block  py-1 text-sm">
                         Press
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="#"
+                    <router-link :to="{name: 'product-list'}"
                         class="text-gray-600 hover:bg-gray-700 hover:text-white block py-2 text-sm">Shop</router-link>
                 </li>
                 <li>
-                    <router-link to="#"
+                    <router-link :to="{name: 'about'}"
                         class="text-gray-600 hover:bg-gray-700 hover:text-white block py-2 text-sm">Our Story</router-link>
                 </li>
                 <li>
