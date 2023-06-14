@@ -23,7 +23,7 @@
             <div class="inline-flex flex-col px-2 items-start gap-y-5">
                 <h4 class="text-xl text-black font-semibold">Support</h4>
                 <div class="flex flex-col space-y-2">
-                    <router-link :to="{name: 'faq'}" class="text-base text-gray-600 capitalize hover:text-black transition duration-300">FAQs</router-link>
+                    <router-link :to="{name: 'faqs'}" class="text-base text-gray-600 capitalize hover:text-black transition duration-300">FAQs</router-link>
                     <router-link :to="{name: 'contact'}" class="text-base text-gray-600 capitalize hover:text-black transition duration-300">Contact us</router-link>
                     <router-link to="" class="text-base text-gray-600 capitalize hover:text-black transition duration-300">Track Order</router-link>
                     <router-link to="" class="text-base text-gray-600 capitalize hover:text-black transition duration-300">Shipping and Returns</router-link>

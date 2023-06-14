@@ -63,8 +63,13 @@ const routes = [
   },
   {
     path: '/faqs',
-    name: 'faq',
+    name: 'faqs',
     component: () => import(/* webpackChunkName: "about" */ '../views/FaqViews')
+  }, {
+    path: '/faq/:title',
+    name: 'faq',
+    props: true,
+    component: () => import(/* webpackChunkName: "about" */ '../views/SingleFaq')
   },
   {
     path: '/account/forget-password',
