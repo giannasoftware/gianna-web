@@ -22,7 +22,7 @@
                             }}
                         </RouterLink>
                         <p class="rating text-orange-400 text-sm mb-2 items-center hidden md:flex">
-                            <i class="bx bxs-star text-lg"></i> <span class="ml-1 text-white">({{ item.review_count }}
+                            <i class="bx bxs-star text-lg"></i> <span class="ml-1 text-white">({{ item.rating.count }}
                                 reviews)</span>
                         </p>
                         <h3 class="text-sm md:text-2xl text-white font-semibold">{{ item.price }}</h3>

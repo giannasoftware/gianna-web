@@ -67,7 +67,7 @@ const formValidator = () => {
     result = await v$.value.$touch();
   });
 
-  return { formData, result, v$ };
+  return { formData, result, v$, checkErrorStatus };
 }
 
 

@@ -3,7 +3,7 @@
         <div class="container mx-auto">
             <div class="flex flex-col-reverse items-center py-16 md:py-0 md:flex-row overflow-hidden">
                 <!-- Left Item -->
-                <div class="flex flex-col mt-4 md:mt-0 md:w-1/2">
+                <div class="flex flex-col mt-4 md:mt-0 md:w-1/2" v-motion-slide-visible-left :delay="200">
                     <h4 class="text-xl md:text-2xl text-center font-Cormorant tracking-sm md:text-left uppercase">Annual
                         sale</h4>
                     <h1
@@ -26,7 +26,7 @@
                 <!-- Right Item -->
                 <div class="md:w-1/2 self-center relative z-0">
 
-                    <div class="shrink-0 md:-mb-2 xl:-mt-2">
+                    <div class="shrink-0 md:-mb-2 xl:-mt-2" v-motion-slide-visible-right>
                         <img src="@/assets/img/banner.png" alt="Summer Collective"
                             class="w-full h-full object-fill object-center">
                     </div>

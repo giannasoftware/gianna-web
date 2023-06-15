@@ -1,12 +1,23 @@
 <template>
-  <!-- Header Navigation-->
-  <NavBar :className="{ 'scrolled': !view.atTopOfPage}"  />
+  <div class="w-full relative">
+    <!-- Header Navigation-->
+    <NavBar :className="{ 'scrolled': !view.atTopOfPage }" />
+    <!-- <div class="absolute top-0 left-0 right-0"> -->
 
-  <router-view />
+      <!-- animating routes -->
+      <router-view v-slot="{ Component, route }">
+        <!-- <Transition name="fade" mode="out-in"> -->
+        <Transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass" mode="out-in">
+          <div :key="route.name">
+            <component :is="Component" />
+          </div>
+        </Transition>
+      </router-view>
+    <!-- </div> -->
 
-  <!-- Footer -->
-  <Footer/>
-
+    <!-- Footer -->
+    <Footer/>
+  </div>
 </template>
 
 
@@ -25,7 +36,7 @@ onBeforeMount(() => {
 //     window.addEventListener('scroll', this.handleScroll);
 // };
 
-var view = reactive( {
+var view = reactive({
   atTopOfPage: true
 })
 
@@ -45,3 +56,17 @@ const handleScroll = () => {
   //   }
   // }
 </script>
+
+
+<style>
+.fade-enter-from,
+.fade-leave-from {
+  opacity: 0;
+
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+</style>
