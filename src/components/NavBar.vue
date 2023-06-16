@@ -23,11 +23,11 @@
                                     <template #menu>
                                         <div>
                                             <route-link to="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                                tabindex="-1" id="user-menu-item-0">Your Profile</route-link>
+                                                tabindex="-1" id="user-menu-item-0">Category 1</route-link>
                                             <route-link to="" href="#" class="block px-4 py-2 text-sm text-gray-700"
-                                                role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</route-link>
+                                                role="menuitem" tabindex="-1" id="user-menu-item-1">Category 2</route-link>
                                             <route-link to="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                                tabindex="-1" id="user-menu-item-2">Sign out</route-link>
+                                                tabindex="-1" id="user-menu-item-2">Category 3</route-link>
                                         </div>
                                     </template>
                                 </Dropdown>
@@ -41,17 +41,17 @@
                     <div class="hidden md:block">
                         <div class="inline-flex items-center md:gap-x-3">
                             <button class="font-medium leading-6" @click="handleSearch">
-                                <i class="bx bx-search"></i>
+                                <i class="bx bx-search text-lg"></i>
                             </button>
-                            <router-link to="/account/login" class="font-medium leading-6"><i class="bx bx-user"></i></router-link>
+                            <router-link to="/account/login" class="font-medium leading-6"><i class="bx bx-user text-lg"></i></router-link>
                             <router-link to="/shop/cart" class="relative flex items-center leading-6 font-medium">
-                                <i class="bx bx-shopping-bag"></i>
-                                <span class="text-12 ml-0.5">$200</span>
+                                <i class="bx bx-shopping-bag text-lg"></i>
+                                <!-- <span class="text-12 ml-0.5">$0</span> -->
                                 <span
                                     class="absolute bg-primary-500 px-2 rounded-full text-[11px] -bottom-1 left-2 text-slate-50 w-1 h-4 flex items-center justify-center">0</span>
                             </router-link>
                             <router-link to="/shop/wishlist" class="font-medium leading-6">
-                                <i class="bx bx-heart"></i>
+                                <i class="bx bx-heart text-lg"></i>
                             </router-link>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="md:hidden">
                         <router-link to="/shop/cart"
                             class="relative flex items-center text-xl font-medium transition-all duration-300">
-                            <i class="bx bx-shopping-bag"></i>
+                            <i class="bx bx-shopping-bag text-lg"></i>
                             <span class="text-11 ml-0.5">$200</span>
                             <span
                                 class="absolute bg-primary-500 px-2 rounded-full text-11 -bottom-1 left-2 text-slate-50 w-1 h-4 flex items-center justify-center">0</span>

@@ -1,5 +1,5 @@
 <template>
-    <div class="border-b border-gray-200 py-6 px-2 bg-white">
+    <div class="border-b border-gray-200 py-4 px-2 bg-white">
         <h3 class="-mx-1 -my-3 flow-root text-lg">
             <button type="button"
                 class="flex w-full items-center justify-between py-3 text-gray-400 hover:text-gray-500 px-4 border-b-1 border-gray-300"

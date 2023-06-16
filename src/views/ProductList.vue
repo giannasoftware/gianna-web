@@ -59,9 +59,12 @@
             </div>
 
             <!--Product list -->
-            <div class="grid grid-cols-1 gap-x-8 gap-y-6" :class="{ 'lg:grid-cols-4': showX }">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6" :class="{ 'md:grid-cols-3 lg:grid-cols-4': showX }">
+                <div class="fixed inset-0 bg-black bg-opacity-25 z-10 md:hidden" v-show="showX"></div>
                 <!-- Left -->
-                <div v-show="showX" class="hidden md:inline">
+                <div v-show="showX"
+                class="fixed inset-0 mt-40 md:mt-0 mx-auto w-64 lg:w-full z-10 md:mx-0 md:z-0 md:relative">
+                <button class="text-2xl text-white right-10 md:hidden flex items-center justify-between w-full mb-3" @click.prevent="showX = false"><i class="bx bx-x self-end"></i></button>
                     <FilterMenu name="Category" class="bg-white" :open="true">
                         <template #filterMenu>
                             <CheckBox name="category[]" label="travel" />
@@ -122,7 +125,6 @@
 <script setup>
 import Breadcrumb from '@/components/nav/Breadcrumb'
 import Dropdown from '@/components/nav/Dropdown';
-import GridView from '@/components/products/GridView'
 import FilterMenu from '@/components/FilterMenu'
 import { ref } from 'vue'
 import CheckBox from '@/components/form/CheckBox';
