@@ -9,11 +9,11 @@
   <PageSection title="Category" link="/shop/category">
     <template #content>
       <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4 lg:grid-cols-5 xl:gap-x-6">
-        <CategoryItem v-motion-slide-visible-left :delay="200" />
-        <CategoryItem v-motion-slide-visible-left :delay="200" />
-        <CategoryItem v-motion-slide-visible-left :delay="200" />
-        <CategoryItem v-motion-slide-visible-left :delay="200" />
-        <CategoryItem v-motion-slide-visible-left :delay="200" />
+        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="100"/>
+        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="200" />
+        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="300" />
+        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="400" />
+        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="500" />
       </div>
     </template>
   </PageSection>
@@ -23,13 +23,11 @@
     <template #content>
       <div class="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-2 md:grid-cols-3 xl:gap-x-8">
         <Suspense>
+          <Products/>
           <template #fallback>
             Loading....
           </template>
-          <template #default>
-            <!-- {{ items  }} -->
-            <GridView v-for="item in items" :item="item" key="item.id" />
-          </template>
+         
         </Suspense>
       </div>
     </template>
@@ -47,15 +45,19 @@
 import PromoSection from '@/components/PromoSection';
 import CategoryItem from '@/components/products/CategoryItem';
 import PageSection from '@/components/PageSection.vue';
+import Products from '@/components/Products'
 import CTA from '@/components/banner/CTA'
 import GridView from '@/components/products/GridView.vue';
-import { ref } from 'vue';
 import NotifyBanner from '@/components/banner/NotifyBanner.vue';
 
-import HomeAPI from '../resources/products'
+import { useMotions } from '@vueuse/motion'
 
+// Get custom controls
+const { custom } = useMotions()
 
-const items = ref(await HomeAPI.getProduct())
-
+const customEvent = () => {
+  // Change the current variant of `custom` element
+  custom.variant.value = 'pop'
+}
 
 </script>

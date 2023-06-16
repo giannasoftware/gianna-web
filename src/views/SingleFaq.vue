@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-secondary pt-28 pb-20 h-96">
+    <div class="bg-secondary-500 pt-28 pb-20 h-96">
         <div class="container flex flex-col justify-between h-full">
             <!-- breadcrumb -->
             <Breadcrumb page="FAQs" subpage="Shipping" />

@@ -69,11 +69,11 @@
                 <!-- <div class="bottom-2 absolute"> -->
                 <div class="space-y-2">
                     <router-link to="/account/sign-in"
-                        class="flex items-center justify-center font-medium text-base bg-primary py-2 text-white hover:bg-transparent hover:border hover:text-primary hover:border-primary transition duration-200">
+                        class="flex items-center justify-center font-medium text-base bg-primary-500 py-2 text-white hover:bg-transparent hover:border hover:text-primary-500 hover:border-primary transition duration-200">
                         Login
                     </router-link>
                     <router-link to="/account/register"
-                        class="flex bg-white items-center justify-center font-medium text-base py-2 text-primary bg-transparent border-2 border-primary transition duration-200 hover:text-white hover:bg-primary">
+                        class="flex bg-white items-center justify-center font-medium text-base py-2 text-primary-500 bg-transparent border-2 border-primary transition duration-200 hover:text-white hover:bg-primary-500">
                         Register
                     </router-link>
                 </div>

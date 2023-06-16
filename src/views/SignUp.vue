@@ -45,7 +45,7 @@
 
                         <div class="flex items-center flex-col w-96">
                             <button type="submit" @click.prevent="handleForm"
-                                class="bg-primary text-white text-center w-full py-2 mb-3 hover:bg-transparent hover:text-primary hover:border-primary hover:border transition duration-200">
+                                class="bg-primary-500 text-white text-center w-full py-2 mb-3 hover:bg-transparent hover:text-primary-500 hover:border-primary hover:border transition duration-200">
                                 Create account
                             </button>
                             <p class="text-center text-gray-500 text-sm "> Already have an account? <RouterLink

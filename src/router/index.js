@@ -9,8 +9,9 @@ const routes = [
     name: 'home',
     component: HomeView,
     meta:{
-      enterClass: 'animate__animated animate__fadeInLeft',
-      leaveClass: 'animate__animated animate_fadeOutRight'
+      // enterClass: 'animate__animated animate__fadeInLeft',
+      // leaveClass: 'animate__animated animate_fadeOutRight',
+      title: 'Gianna - Homepage'
     }
   },
   {
@@ -33,7 +34,7 @@ const routes = [
     }
   },
   {
-    path: '/shop/:name',
+    path: '/shop/:name/:id',
     name: 'product',
     component: () => import(/* webpackChunkName: "about" */ '../views/SingleProduct.vue'),
     meta:{

@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="absolute top-8 left-0 right-0"> -->
-    <div class="bg-secondary pt-28 pb-10">
+    <div class="bg-secondary-500 pt-28 pb-10">
       <div class="container">
         <!-- breadcrumb -->
         <Breadcrumb subpage="About" />
@@ -17,7 +17,7 @@
           </blockquote>
           <div class="inline-flex items-center self-end space-x-2">
             <h3 class="text-xl md:text-2xl text-black font-bold">About Us</h3>
-            <button class="rounded-full h-10 w-10 bg-primary text-white text-center px-1 py-0.5">
+            <button class="rounded-full h-10 w-10 bg-primary-500 text-white text-center px-1 py-0.5">
               <i class="bx bx-play text-3xl"></i>
             </button>
           </div>

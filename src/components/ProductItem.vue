@@ -10,7 +10,7 @@
             <div class="flex justify-between w-full md:block">
                 <div class="">
                     <h3 class="group/link text-base font-medium md:text-xl text-black">
-                        <route-link :to="item.link" class="cursor-pointer group-hover/link:text-primary">
+                        <route-link :to="item.link" class="cursor-pointer group-hover/link:text-primary-500">
                             <span aria-hidden="true" class="absolute inset-0"></span>
                             {{ item.title }}
                         </route-link>
@@ -26,7 +26,7 @@
                 <p class="text-xl md:text-2xl font-medium text-black">{{ item.price }}</p>
             </div>
             <button @click="addToCart"
-                class="flex items-center justify-center -mr-20 px-4 py-4 rounded-full w-6 h-6 group-hover/content:text-primary text-black-90 transition-all ease-in-out duration-500 md:hidden ">
+                class="flex items-center justify-center -mr-20 px-4 py-4 rounded-full w-6 h-6 group-hover/content:text-primary-500 text-black-90 transition-all ease-in-out duration-500 md:hidden ">
                 <i class="bx bx-shopping-bag text-xl md:text-3xl"></i>
             </button>
         </div>
@@ -34,7 +34,7 @@
         <div
             class="hidden group/button absolute top-5 md:-right-16 text-black-0 transition-all ease-in-out duration-500 group-hover:right-4">
             <button @click="saveLater"
-                class="flex items-center justify-center px-4 py-4 rounded-full w-6 h-6  group-hover/button:bg-inverse-primary-400 group-hover/button:text-primary group-hover:shadow-sm">
+                class="flex items-center justify-center px-4 py-4 rounded-full w-6 h-6  group-hover/button:bg-primary-100 group-hover/button:text-primary-500 group-hover:shadow-sm">
                 <i class="bx bx-heart text-xl"></i>
             </button>
         </div>

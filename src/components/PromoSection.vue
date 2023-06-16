@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full bg-secondary pt-4 md:pt-6 lg:pt-10 xl:pt-11">
+    <div class="w-full bg-secondary-500 pt-4 md:pt-6 lg:pt-10 xl:pt-11">
         <div class="container mx-auto">
             <div class="flex flex-col-reverse items-center py-16 md:py-0 md:flex-row overflow-hidden">
                 <!-- Left Item -->
-                <div class="flex flex-col mt-4 md:mt-0 md:w-1/2" v-motion-slide-visible-left :delay="200">
+                <div class="flex flex-col mt-4 md:mt-0 md:w-1/2" v-motion-visible-once :delay="100">
                     <h4 class="text-xl md:text-2xl text-center font-Cormorant tracking-sm md:text-left uppercase">Annual
                         sale</h4>
                     <h1
@@ -17,7 +17,7 @@
                     </p>
                     <div class="flex justify-center flex-end md:justify-start !mt-10">
                         <a href="#"
-                            class="py-3 px-5 text-white bg-primary flex items-center justify-between baseline capitalize text-base hover:bg-transparent hover:border-2 hover:border-primary hover:text-primary">
+                            class="py-3 px-5 text-white bg-primary-500 flex items-center justify-between baseline capitalize text-base hover:bg-transparent hover:border-2 hover:border-primary hover:text-primary-500">
                             Explore now <i class="bx bx-right-arrow-alt ml-4 transition-all ease-in-out delay-300" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -26,21 +26,21 @@
                 <!-- Right Item -->
                 <div class="md:w-1/2 self-center relative z-0">
 
-                    <div class="shrink-0 md:-mb-2 xl:-mt-2" v-motion-slide-visible-right>
+                    <div class="shrink-0 md:-mb-2 xl:-mt-2">
                         <img src="@/assets/img/banner.png" alt="Summer Collective"
                             class="w-full h-full object-fill object-center">
                     </div>
 
                     <div class="hidden text-sm absolute right-0 top-80 group btn-slides items-center lg:block ">
-                        <button class="flex items-center hover:text-primary">
+                        <button class="flex items-center hover:text-primary-500">
                             <span class="">1</span>
                         </button>
                         <button
-                            class="flex items-center group-[.btn-slides]:-ml-6 text-black text-base hover:text-primary group/active">
+                            class="flex items-center group-[.btn-slides]:-ml-6 text-black text-base hover:text-primary-500 group/active">
                             <span class="group-[.btn-slides]:pr-1 group-[.btn-slides]:font-medium">2</span>
-                            <span class="w-8 h-[2px] bg-black ml-0.5 group-hover/active:bg-primary"></span>
+                            <span class="w-8 h-[2px] bg-black ml-0.5 group-hover/active:bg-primary-500"></span>
                         </button>
-                        <button class="flex items-center hover:text-primary">
+                        <button class="flex items-center hover:text-primary-500">
                             <span class="">3</span>
                         </button>
                     </div>

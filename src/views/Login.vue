@@ -40,7 +40,7 @@
                         <div class="flex flex-col items-center w-full">
 
                             <button type="submit" @click.prevent="handleForm"
-                                class="bg-primary text-white text-center w-full py-2 mt-5 mb-3 hover:border-primary hover:border transition duration-200">Sign
+                                class="bg-primary-500 text-white text-center w-full py-2 mt-5 mb-3 hover:border-primary hover:border transition duration-200">Sign
                                 in </button>
                             <p class="text-center text-gray-500 text-sm "> Don’t have an account? <RouterLink
                                     :to="{ name: 'signUp' }" class="text-black font-medium">Sign up</RouterLink>

@@ -3,7 +3,7 @@
         <ol class="inline-flex items-center space-x-1 md:space-x-3">
             <li class="inline-flex items-center">
                 <a href="/"
-                    class="inline-flex items-center text-base font-normal text-gray-600 hover:text-primary dark:text-gray-500 dark:hover:text-black">
+                    class="inline-flex items-center text-base font-normal text-gray-600 hover:text-primary-500 dark:text-gray-500 dark:hover:text-black">
                    <!-- <span class="bx bxs-home mr-1"></span> -->
                     Home
                 </a>
@@ -12,7 +12,7 @@
                 <div class="flex items-center">
                     <span class="bx bxs-chevron-right text-gray-500" :class="[ subpage  ? 'font-normal text-gray-600' : 'text-black font-medium']"></span>
                     <a href="#"
-                        class="ml-1 text-base capitalize hover:text-primary md:ml-2  dark:hover:text-black" :class="[ subpage  ? 'font-normal text-gray-600' : 'text-black font-medium']">{{page}}</a>
+                        class="ml-1 text-base capitalize hover:text-primary-500 md:ml-2  dark:hover:text-black" :class="[ subpage  ? 'font-normal text-gray-600' : 'text-black font-medium']">{{page}}</a>
                 </div>
             </li>
             <li aria-current="page" v-if="subpage">

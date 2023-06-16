@@ -7,11 +7,11 @@
       <!-- animating routes -->
       <router-view v-slot="{ Component, route }">
         <!-- <Transition name="fade" mode="out-in"> -->
-        <Transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass" mode="out-in">
-          <div :key="route.name">
+        <!-- <Transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass" mode="out-in">
+          <div :key="route.name"> -->
             <component :is="Component" />
-          </div>
-        </Transition>
+          <!-- </div>
+        </Transition> -->
       </router-view>
     <!-- </div> -->
 

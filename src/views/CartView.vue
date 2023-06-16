@@ -271,11 +271,11 @@
 
                             <div class="button space-y-4 flex flex-col mt-3">
                                 <router-link to="/checkout"
-                                    class="bg-primary py-3 px-3 text-white text-base font-medium text-center"> Proceed to
+                                    class="bg-primary-500 py-3 px-3 text-white text-base font-medium text-center"> Proceed to
                                     Checkout
                                 </router-link>
                                 <router-link to="/shop/cart"
-                                    class="border border-primary py-3 px-3 text-base font-medium text-primary text-center">
+                                    class="border border-primary py-3 px-3 text-base font-medium text-primary-500 text-center">
                                     Continue
                                     Shopping </router-link>
                             </div>

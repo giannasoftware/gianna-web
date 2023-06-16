@@ -15,7 +15,7 @@
                         <span class="bx bx-x transition-transform ease-in-out duration-200 text-red-500 ml-4"
                             :class="{ 'hidden': !showX }"></span>
                     </button>
-    
+
                     <div class="inline-flex items-center">
                         <div class="relative inline-block text-left">
                             <div>
@@ -59,7 +59,7 @@
             </div>
 
             <!--Product list -->
-            <div class="grid grid-cols-1 gap-x-8 gap-y-6" :class="{'lg:grid-cols-4': showX}">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6" :class="{ 'lg:grid-cols-4': showX }">
                 <!-- Left -->
                 <div v-show="showX" class="hidden md:inline">
                     <FilterMenu name="Category" class="bg-white" :open="true">
@@ -104,7 +104,12 @@
                 <!-- right -->
                 <div class="md:col-span-3">
                     <div class=" grid grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-3">
-                        <GridView v-for="item in items" :item="item" key="item.id"  />
+                        <Suspense>
+                            <Products />
+                            <template #fallback>
+                                Loading....
+                            </template>
+                        </Suspense>
                     </div>
                 </div>
             </div>
@@ -121,6 +126,7 @@ import GridView from '@/components/products/GridView'
 import FilterMenu from '@/components/FilterMenu'
 import { ref } from 'vue'
 import CheckBox from '@/components/form/CheckBox';
+import Products from '@/components/Products.vue';
 
 const items = ref([
     {

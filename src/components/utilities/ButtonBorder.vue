@@ -12,7 +12,7 @@ defineEmits(['click'])
 
 
 <template>
-    <Button class="border border-primary py-3 px-3 text-base font-medium text-primary text-center flex items-center w-full"
+    <Button class="border border-primary py-3 px-3 text-base font-medium text-primary-500 text-center flex items-center w-full"
         @click.prevent="$emit('click')" v-bind="$attrs">
         {{ label }}
 

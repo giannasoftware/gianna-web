@@ -38,29 +38,34 @@ module.exports = {
     },
     extend: {
       screens: {
-        xs:{max: '320px'}
+        xs: { max: "320px" },
       },
       colors: {
         black: "hsl(0, 0%, 22%)",
-        secondary: "hsl(39, 87%, 94%)",
-        primary: "hsl(326, 93%, 61%)",
+        secondary: {
+          500: "hsl(39, 87%, 94%)",
+          100: "hsl(42, 62%, 96%)",
+        },
+        primary: {
+          500: "hsl(326, 93%, 61%)",
+          100: "hsl(326, 100%, 97%)",
+        },
         blue: "hsla(205, 89%, 50%, 1)",
         purple: "hsla(248, 69%, 55%, 1)",
         yellow: "hsl(43, 98%, 62%)",
         green: "hsl(142, 32%, 30%)",
         brightPale: "hsl(7, 46%, 79%)",
         "inverse-primary": "hsl(326, 91%, 77%)",
-        "inverse-primary-400": "hsl(326, 100%, 97%)",
         "inverse-secondary": "hsl(42, 62%, 96%)",
         "black-90": "hsl(220, 2%, 38%,)",
       },
       fontFamily: {
         Cormorant: ["'Cormorant Upright'", "serif"],
-        Jost: ["'Jost'", 'sans-serif']
+        Jost: ["'Jost'", "sans-serif"],
       },
-      fontWeight:{
-        'extrabold': '900',
-        black: '1000'
+      fontWeight: {
+        extrabold: "900",
+        black: "1000",
       },
       letterSpacing: {
         sm: " 0.4rem",
@@ -71,7 +76,6 @@ module.exports = {
         11: "11px",
         12: "12px",
       },
-      
     },
   },
   plugins: [require("flowbite/plugin")],

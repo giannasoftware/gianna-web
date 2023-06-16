@@ -7,7 +7,7 @@
                     alt="Product 1" class="object-fill object-center bg-gray-600 bg-opacity-75">
             </div>
             <div class="mt-0 ml-4 text-left">
-                <h3 class="text-base font-medium leading-6 text-gray-600 group-hover:text-primary transiton ease-out duration-100">
+                <h3 class="text-base font-medium leading-6 text-gray-600 group-hover:text-primary-500 transiton ease-out duration-100">
                     Summer Cloth
                 </h3>
                 <div class="mt-1">

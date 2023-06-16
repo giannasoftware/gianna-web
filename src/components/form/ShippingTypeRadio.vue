@@ -3,7 +3,7 @@
         <input type="radio" name="label" :id="inputId" class="hidden" v-bind="$attrs" :value="inputValue" v-model="modalValue"
             @click="$emit('update:modalValue', $event.target.value)">
         <label :for="inputId"
-            class="text-sm text-black px-4 py-2 font-medium hover:bg-inverse-primary hover:transition-shadow hover:text-gray-50 hover:shadow duration-150">
+            class="text-sm text-black px-4 py-2 font-medium hover:bg-primary-100 hover:transition-shadow hover:text-gray-50 hover:shadow duration-150">
             {{ inputLabel }}
         </label>
     </div>

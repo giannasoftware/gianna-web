@@ -24,7 +24,7 @@
 
                         <div class="flex items-center flex-col w-full">
                             <button type="submit"
-                                class="bg-primary text-white text-center w-full py-2 mt-2 mb-3 hover:border-primary hover:border transition duration-200">Reset
+                                class="bg-primary-500 text-white text-center w-full py-2 mt-2 mb-3 hover:border-primary hover:border transition duration-200">Reset
                                 Password</button>
                             <p class="text-center text-gray-500 text-sm ">Back to <RouterLink :to="{ name: 'login' }"
                                     class="text-black font-medium">Login</RouterLink>
