@@ -2,21 +2,24 @@
   <div class="w-full relative">
     <!-- Header Navigation-->
     <NavBar :className="{ 'scrolled': !view.atTopOfPage }" />
-    <!-- <div class="absolute top-0 left-0 right-0"> -->
 
-      <!-- animating routes -->
-      <router-view v-slot="{ Component, route }">
-        <!-- <Transition name="fade" mode="out-in"> -->
-        <!-- <Transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass" mode="out-in">
-          <div :key="route.name"> -->
-            <component :is="Component" />
-          <!-- </div>
-        </Transition> -->
-      </router-view>
-    <!-- </div> -->
+    <router-view v-slot="{ Component, route }">
+      <!-- Animation -->
+      <Transition name="route" mode="out-in" appear>
+        <!-- <KeepAlive></KeepAlive> -->
+        <Suspense>
+          <div :key="route.name">
+            <component :is="Component"></component>
+          </div>
+          <template #fallback>
+            <p>Loading</p>
+          </template>
+        </Suspense>
+      </Transition>
+    </router-view>
 
     <!-- Footer -->
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -50,23 +53,26 @@ const handleScroll = () => {
     if (!view.atTopOfPage) view.atTopOfPage = true
   }
 }
-  // export default{
-  //   components:{
-  //     NavBar
-  //   }
-  // }
+
 </script>
 
 
 <style>
-.fade-enter-from,
-.fade-leave-from {
+/* route transition */
+.route-enter-from {
   opacity: 0;
-
+  transform: translateY(-100px);
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease-in-out;
+.route-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.route-leave-to {
+  transform: translateY(100px);
+}
+
+.route-leave-active {
+  transition: all 0.3s ease-in;
 }
 </style>
