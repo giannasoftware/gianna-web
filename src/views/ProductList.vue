@@ -106,13 +106,13 @@
 
                 <!-- right -->
                 <div class="md:col-span-3">
-                    <div class=" grid grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-3">
-                        <Suspense>
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-2 xl:gap-x-8 md:grid-cols-3">
+                        <!-- <Suspense> -->
                             <Products />
-                            <template #fallback>
+                            <!-- <template #fallback>
                                 Loading....
                             </template>
-                        </Suspense>
+                        </Suspense> -->
                     </div>
                 </div>
             </div>

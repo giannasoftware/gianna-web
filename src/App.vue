@@ -45,7 +45,7 @@ var view = reactive({
 
 const handleScroll = () => {
   // when the user scrolls, check the pageYOffset
-  if (window.pageYOffset > 0) {
+  if (window.scrollY > 150) {
     // user is scrolled
     if (view.atTopOfPage) view.atTopOfPage = false
   } else {

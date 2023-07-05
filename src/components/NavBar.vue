@@ -32,8 +32,9 @@
                                     </template>
                                 </Dropdown>
                             </div>
-                            <router-link :to="{name: 'product-list'}" class="text-sm font-medium leading-6">Collectives</router-link>
-                            <router-link :to="{name: 'press'}" class="text-sm font-medium leading-6">Press</router-link>
+                            <router-link :to="{ name: 'product-list' }"
+                                class="text-sm font-medium leading-6">Collectives</router-link>
+                            <router-link :to="{ name: 'press' }" class="text-sm font-medium leading-6">Press</router-link>
                         </div>
                     </div>
 
@@ -43,7 +44,8 @@
                             <button class="font-medium leading-6" @click="handleSearch">
                                 <i class="bx bx-search text-lg"></i>
                             </button>
-                            <router-link to="/account/login" class="font-medium leading-6"><i class="bx bx-user text-lg"></i></router-link>
+                            <router-link to="/account/login" class="font-medium leading-6"><i
+                                    class="bx bx-user text-lg"></i></router-link>
                             <router-link to="/shop/cart" class="relative flex items-center leading-6 font-medium">
                                 <i class="bx bx-shopping-bag text-lg"></i>
                                 <!-- <span class="text-12 ml-0.5">$0</span> -->
@@ -72,72 +74,72 @@
         </div>
     </nav>
 
-    <MobileNav @openSidebar="handleShowMenu" @openSearch="handleSearch"/>
+    <MobileNav @openSidebar="handleShowMenu" @openSearch="handleSearch" />
     <!-- <div class="relative"> -->
-        <SideBar :isActive="showMenu" @close="handleShowMenu">
-            <template #menu>
-                <li>
-                    <router-link :to="{name: 'press'}" class="text-gray-600 block  py-1 text-sm">
-                        Press
-                    </router-link>
-                </li>
-                <li>
-                    <router-link :to="{name: 'product-list'}"
-                        class="text-gray-600 hover:bg-gray-700 hover:text-white block py-2 text-sm">Shop</router-link>
-                </li>
-                <li>
-                    <router-link :to="{name: 'about'}"
-                        class="text-gray-600 hover:bg-gray-700 hover:text-white block py-2 text-sm">Our Story</router-link>
-                </li>
-                <li>
-                    <router-link to="#"
-                        class="text-gray-600 hover:bg-gray-700 hover:text-white block py-2 text-sm">Contact</router-link>
-                </li>
-
-            </template>
-
-            <template #category>
-                <div class="border-t border-b border-gray-200 px-4 py-3 w-full">
-                    <h3 class="-mx-2 -my-3 flow-root">
-                        <!-- Expand/collapse section button -->
-                        <button type="button"
-                            class="flex w-full items-center justify-between bg-white py-3 text-gray-400 hover:text-gray-500"
-                            aria-controls="filter-section-mobile-0" aria-expanded="false" @click.prevent="handleFilter">
-                            <span class="font-medium text-gray-900">Category</span>
-                            <span class="ml-6 flex items-center">
-                                <!-- Expand icon, show/hide based on section open state. -->
-                                <i class="bx bx-plus" :class="{ hidden: isExpanded }"></i>
-                                <!-- Collapse icon, show/hide based on section open state. -->
-                                <i class="bx bx-minus" v-show="isExpanded"></i>
-                            </span>
-                        </button>
-                    </h3>
+    <SideBar :isActive="showMenu" @close="handleShowMenu">
+        <template #menu>
+            <li>
+                <router-link :to="{ name: 'home' }" class="text-black font-medium block  py-1 text-sm">
+                    Home
+                </router-link>
+            </li>
+            <li>
+                <router-link to="#" class="text-black py-1 text-sm capitalize block cursor-pointer"
+                    @click="handleFilter">
+                    <div class="flex items-center justify-between">
+                        <span class="font-medium text-black">Shop</span>
+                        <span class="ml-6 flex items-center">
+                            <!-- Expand icon, show/hide based on section open state. -->
+                            <i class="bx bx-chevron-right" :class="{ hidden: isExpanded }"></i>
+                            <!-- Collapse icon, show/hide based on section open state. -->
+                            <i class="bx bx-minus" v-show="isExpanded"></i>
+                        </span>
+                    </div>
 
                     <!-- Filter section, show/hide based on section state. -->
-                    <div class="pt-6" v-show="isExpanded">
-                        <div class="space-y-5">
-                            <a href="#" class="block text-sm font-normal">
-                                Category 1
-                            </a>
-                            <a href="#" class="text-sm font-normal block">
-                                Category 2
-                            </a>
-                            <a href="#" class="text-sm font-normal block">
-                                Category 3
-                            </a>
-                            <a href="#" class="text-sm font-normal block">
-                                Category 3
-                            </a>
-                            <button class="text-sm font-medium block">See More</button>
-                        </div>
+                    <div class="pt-4 pl-3" v-show="isExpanded">
+                        <TransitionGroup name="category" tag="ul" class="space-y-5" v-if="isExpanded" appear>
+                            <li>
+                                <a href="#" class="block text-sm font-normal">
+                                    Category 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block text-sm font-normal">
+                                    Category 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block text-sm font-normal">
+                                    Category 1
+                                </a>
+                            </li>
+                            
+                        </TransitionGroup>
                     </div>
-                </div>
-            </template>
-        </SideBar>
+
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="{ name: 'about' }" class="font-medium text-black block py-1 text-sm capitalize">
+                    Letter From the founder
+                </router-link>
+            </li>
+            <li>
+                <router-link to="#" class="font-medium text-black block py-1 text-sm capitalize">Contact</router-link>
+            </li>
+
+            <li>
+                <router-link :to="{ name: 'press' }" class="font-medium text-black block  py-1 text-sm">
+                    Press
+                </router-link>
+            </li>
+        </template>
+
+    </SideBar>
     <!-- </div> -->
 
-  <SearchBox :open="isSearch" @close="handleSearch"/>
-
+    <SearchBox :open="isSearch" @close="handleSearch" />
 </template>
 
 <script setup>
@@ -168,13 +170,36 @@ const handleDropdown = () => {
 
 const handleShowMenu = () => {
     showMenu.value = !showMenu.value;
+
+    let body = document.getElementById('body')
+
+    if(showMenu.value){
+        body.classList.add('overflow-hidden')
+    }else{
+        body.classList.remove('overflow-hidden')
+    }
 };
 
 
-const handleSearch = () =>{
+const handleSearch = () => {
     isSearch.value = !isSearch.value
-
-    console.log(isSearch.value)
 }
 
 </script>
+
+
+<style>
+.category-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.category-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.category-enter-from,
+.category-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+</style>

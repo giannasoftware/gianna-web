@@ -9,11 +9,11 @@
   <PageSection title="Category" link="/shop/category">
     <template #content>
       <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4 lg:grid-cols-5 xl:gap-x-6">
-        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="100"/>
-        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="200" />
-        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="300" />
-        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="400" />
-        <CategoryItem v-motion="'custom'" :initial="{opacity:0, y:100}" :visible="{opacity:1, y:0}" :delay="500" />
+        <CategoryItem />
+        <CategoryItem />
+        <CategoryItem />
+        <CategoryItem />
+        <CategoryItem />
       </div>
     </template>
   </PageSection>
@@ -21,14 +21,15 @@
   <!-- Products-->
   <PageSection title="Our Products" link="/shop">
     <template #content>
-      <div class="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-2 md:grid-cols-3 xl:gap-x-8">
-        <Suspense>
-          <Products/>
-          <template #fallback>
-            Loading....
-          </template>
-         
-        </Suspense>
+      <div class="mt-10">
+        <div class="grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-2 xl:gap-x-8 md:grid-cols-3">
+          <Suspense>
+            <Products />
+            <template #fallback>
+              Loading...
+            </template>
+          </Suspense>
+        </div>
       </div>
     </template>
   </PageSection>
@@ -47,17 +48,7 @@ import CategoryItem from '@/components/products/CategoryItem';
 import PageSection from '@/components/PageSection.vue';
 import Products from '@/components/Products'
 import CTA from '@/components/banner/CTA'
-import GridView from '@/components/products/GridView.vue';
 import NotifyBanner from '@/components/banner/NotifyBanner.vue';
 
-import { useMotions } from '@vueuse/motion'
-
-// Get custom controls
-const { custom } = useMotions()
-
-const customEvent = () => {
-  // Change the current variant of `custom` element
-  custom.variant.value = 'pop'
-}
 
 </script>

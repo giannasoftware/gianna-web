@@ -3,7 +3,7 @@
         <div class="container mx-auto">
             <div class="flex flex-col-reverse items-center py-16 md:py-0 md:flex-row overflow-hidden">
                 <!-- Left Item -->
-                <div class="flex flex-col mt-4 md:mt-0 md:w-1/2" v-motion-visible-once :delay="100">
+                <div class="flex flex-col mt-4 md:mt-0 md:w-1/2">cl
                     <h4 class="text-xl md:text-2xl text-center font-Cormorant tracking-sm md:text-left uppercase">Annual
                         sale</h4>
                     <h1
