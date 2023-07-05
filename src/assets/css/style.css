@@ -1138,6 +1138,38 @@ input:checked + .toggle-bg {
   top: 20rem;
 }
 
+.top-10 {
+  top: 2.5rem;
+}
+
+.-top-10 {
+  top: -2.5rem;
+}
+
+.-top-0 {
+  top: -0px;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
+.-top-48 {
+  top: -12rem;
+}
+
+.-top-4 {
+  top: -1rem;
+}
+
+.-top-44 {
+  top: -11rem;
+}
+
+.-top-40 {
+  top: -10rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2051,6 +2083,11 @@ input:checked + .toggle-bg {
 .border-gray-600 {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
+.border-gray-50 {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 250 251 / var(--tw-border-opacity));
 }
 
 .border-opacity-10 {

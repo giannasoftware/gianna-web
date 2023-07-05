@@ -32,7 +32,7 @@
                         <slot name="list"></slot>
 
                         <!-- Account -->
-                        <div class="px-4 py-3 w-full mt-72">
+                        <div class="px-4 py-3 w-full mt-72 relative">
                             <h3 class="-mx-2 -my-3 flow-root">
                                 <!-- Expand/collapse section button -->
                                 <button type="button"
@@ -47,17 +47,20 @@
                             </h3>
 
                             <!-- Filter section, show/hide based on section state. -->
-                            <div class="pt-6" v-if="showFilter">
+                            <div class="pt-6 absolute -top-40 bg-white shadow-sm px-4 pb-4 left-0 w-full border border-gray-50"
+                                v-if="showFilter">
                                 <div class="space-y-6">
-                                    <a href="#" class="block text-sm font-normal">
-                                        My Profile
-                                    </a>
-                                    <a href="#" class="text-sm font-normal block">
-                                        Orders
-                                    </a>
-                                    <a href="#" class="text-sm font-normal block">
-                                        Saved Items
-                                    </a>
+                                    <TransitionGroup>
+                                        <a href="#" class="block text-sm font-normal">
+                                            My Profile
+                                        </a>
+                                        <a href="#" class="text-sm font-normal block">
+                                            Orders
+                                        </a>
+                                        <a href="#" class="text-sm font-normal block">
+                                            Saved Items
+                                        </a>
+                                    </TransitionGroup>
                                 </div>
                             </div>
                         </div>
