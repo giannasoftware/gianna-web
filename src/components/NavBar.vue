@@ -122,7 +122,7 @@
             </li>
             <li>
                 <router-link :to="{ name: 'about' }" class="font-medium text-black block py-1 text-sm capitalize">
-                    Letter From the founder
+                   About
                 </router-link>
             </li>
             <li>
