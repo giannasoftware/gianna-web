@@ -1,10 +1,10 @@
 <template>
     <Teleport to="body">
-        <Transition name="sidebar" mode="out-in">
+        <Transition name="sidebar" mode="out-in" v-if="props.isActive">
             <aside class="md:hidden shadow" v-show="props.isActive">
                 <div class="fixed inset-0 bg-black bg-opacity-25"></div>
                 <div
-                    class="z-20 fixed inset-0 top-0 bottom-0 w-60 ml-auto py-8 space-y-2 font-bold bg-white px-4 pb-3 pt-2">
+                    class="z-20 fixed inset-0 top-0 bottom-0 w-60 m-auto     py-8 space-y-2 font-bold bg-white px-4 pb-3 pt-2">
                     <div class="flex flex-col items-start">
                         <div class="flex flex-1 items-center justify-between w-full py-1">
                             <route-link to="/cart" class="inline-flex px-1 py-3">
@@ -32,7 +32,7 @@
                         <slot name="list"></slot>
 
                         <!-- Account -->
-                        <div class="px-4 py-3 w-full mt-72 relative">
+                        <div class="px-4 py-3 w-full mt-60 relative">
                             <h3 class="-mx-2 -my-3 flow-root">
                                 <!-- Expand/collapse section button -->
                                 <button type="button"
@@ -43,25 +43,27 @@
                                         <i class="bi bi-person-circle"></i>
                                     </span>
                                     <span class="font-medium text-gray-900">Account</span>
+                                    <span class="ml-auto">
+                                        <i class="bi bi-chevron-right" v-show="!showFilter"></i>
+                                        <i class="bi bi-chevron-down" v-show="showFilter"></i>
+                                    </span>
                                 </button>
                             </h3>
 
                             <!-- Filter section, show/hide based on section state. -->
-                            <div class="pt-6 absolute -top-40 bg-white shadow-sm px-4 pb-4 left-0 w-full border border-gray-50"
+                            <div class="pt-6 absolute -top-40 bg-gray-50 shadow-sm px-4 pb-4 left-0 w-full border border-gray-50"
                                 v-if="showFilter">
-                                <div class="space-y-6">
-                                    <TransitionGroup>
-                                        <a href="#" class="block text-sm font-normal">
-                                            My Profile
-                                        </a>
-                                        <a href="#" class="text-sm font-normal block">
-                                            Orders
-                                        </a>
-                                        <a href="#" class="text-sm font-normal block">
-                                            Saved Items
-                                        </a>
-                                    </TransitionGroup>
-                                </div>
+                                <TransitionGroup tag="div" class="space-y-6">
+                                    <router-link to="#" class="block text-sm font-normal">
+                                        My Profile
+                                    </router-link>
+                                    <router-link to="#" class="text-sm font-normal block">
+                                        Orders
+                                    </router-link>
+                                    <router-link to="#" class="text-sm font-normal block">
+                                        Saved Items
+                                    </router-link>
+                                </TransitionGroup>
                             </div>
                         </div>
 

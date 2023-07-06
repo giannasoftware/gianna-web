@@ -12,28 +12,31 @@
 
                     <div class="hidden md:block">
                         <div class="flex md:gap-x-12">
+                            <router-link :to="{ name: 'product-list' }" class="text-sm font-medium leading-6">
+                                Shop
+                            </router-link>
                             <div class="relative">
                                 <button class="inline-flex items-center gap-x-2 text-sm font-medium leading-6"
                                     @click="handleDropdown" aria-expanded="false">
-                                    <span>Shop</span>
+                                    <span>Ony Collection | (NEW)</span>
                                     <i class="bx bx-chevron-down"></i>
                                 </button>
 
                                 <Dropdown :isActive="showDropdown">
                                     <template #menu>
-                                        <div>
+                                        <TransitionGroup tag="div" appear name="category" mode="in-out">
+
                                             <route-link to="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                                 tabindex="-1" id="user-menu-item-0">Category 1</route-link>
                                             <route-link to="" href="#" class="block px-4 py-2 text-sm text-gray-700"
                                                 role="menuitem" tabindex="-1" id="user-menu-item-1">Category 2</route-link>
                                             <route-link to="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                                 tabindex="-1" id="user-menu-item-2">Category 3</route-link>
-                                        </div>
+                                        </TransitionGroup>
                                     </template>
                                 </Dropdown>
                             </div>
-                            <router-link :to="{ name: 'product-list' }"
-                                class="text-sm font-medium leading-6">Collectives</router-link>
+
                             <router-link :to="{ name: 'press' }" class="text-sm font-medium leading-6">Press</router-link>
                         </div>
                     </div>
@@ -59,22 +62,32 @@
                     </div>
 
                     <!-- mobile -icon -->
-                    <div class="md:hidden">
+                    <div class="inline-flex gap-x-3 items-center md:hidden">
                         <router-link to="/shop/cart"
                             class="relative flex items-center text-xl font-medium transition-all duration-300">
-                            <i class="bx bx-shopping-bag text-lg"></i>
+                            <i class="bx bx-shopping-bag text-xl"></i>
                             <span class="text-11 ml-0.5">$200</span>
                             <span
                                 class="absolute bg-primary-500 px-2 rounded-full text-11 -bottom-1 left-2 text-slate-50 w-1 h-4 flex items-center justify-center">0</span>
                         </router-link>
+
+                        <button @click="handleSearch"><i class="bx bx-search text-xl"></i></button>
+
+
+                        <Button @click.prevent="handleShowMenu" data-drawer-target="drawer-navigation"
+                            data-drawer-show="drawer-navigation" aria-controls="drawer-navigation"><i
+                                class="bx bx-menu text-xl"></i></Button>
+
                     </div>
+
                 </div>
             </div>
             <!-- mobile-cart -->
         </div>
     </nav>
 
-    <MobileNav @openSidebar="handleShowMenu" @openSearch="handleSearch" />
+    <!-- <MobileNav @openSidebar="handleShowMenu" @openSearch="handleSearch" /> -->
+
     <!-- <div class="relative"> -->
     <SideBar :isActive="showMenu" @close="handleShowMenu">
         <template #menu>
@@ -84,10 +97,19 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="#" class="text-black py-1 text-sm capitalize block cursor-pointer"
-                    @click="handleFilter">
+                <router-link :to="{ name: 'product-list' }" class="text-black font-medium block  py-1 text-sm">
+                    Gianna| Timed pieces | Luxury
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="{ name: 'product-list' }" class="text-black font-medium block  py-1 text-sm">
+                    Shop
+                </router-link>
+            </li>
+            <li>
+                <router-link to="#" class="text-black py-1 text-sm capitalize block cursor-pointer" @click="handleFilter">
                     <div class="flex items-center justify-between">
-                        <span class="font-medium text-black">Shop</span>
+                        <span class="font-medium text-black">Ony Collection</span>
                         <span class="ml-6 flex items-center">
                             <!-- Expand icon, show/hide based on section open state. -->
                             <i class="bx bx-chevron-right" :class="{ hidden: isExpanded }"></i>
@@ -99,22 +121,28 @@
                     <!-- Filter section, show/hide based on section state. -->
                     <div class="pt-4 pl-3" v-show="isExpanded">
                         <TransitionGroup name="category" tag="ul" class="space-y-5" v-if="isExpanded" appear>
+
                             <li>
                                 <a href="#" class="block text-sm font-normal">
-                                    Category 1
+                                    Dresses
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="block text-sm font-normal">
-                                    Category 1
+                                    Tops
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="block text-sm font-normal">
-                                    Category 1
+                                    Bottoms
                                 </a>
                             </li>
-                            
+                            <li>
+                                <a href="#" class="block text-sm font-normal">
+                                    View all
+                                </a>
+                            </li>
+
                         </TransitionGroup>
                     </div>
 
@@ -122,7 +150,7 @@
             </li>
             <li>
                 <router-link :to="{ name: 'about' }" class="font-medium text-black block py-1 text-sm capitalize">
-                   About
+                    About
                 </router-link>
             </li>
             <li>
@@ -173,9 +201,9 @@ const handleShowMenu = () => {
 
     let body = document.getElementById('body')
 
-    if(showMenu.value){
+    if (showMenu.value) {
         body.classList.add('overflow-hidden')
-    }else{
+    } else {
         body.classList.remove('overflow-hidden')
     }
 };
@@ -190,16 +218,16 @@ const handleSearch = () => {
 
 <style>
 .category-enter-active {
-  transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .category-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .category-enter-from,
 .category-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
+    transform: translateX(20px);
+    opacity: 0;
 }
 </style>
