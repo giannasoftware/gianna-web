@@ -18,7 +18,7 @@
                     <router-link :to="{ name: 'home' }"
                         class="text-base text-gray-600 hover:text-black transition duration-300">Home</router-link>
                     <router-link :to="{ name: 'about' }"
-                        class="text-base text-gray-600 hover:text-black transition duration-300"> About </router-link>
+                        class="text-base text-gray-600 hover:text-black transition duration-300"> Founder's Letter </router-link>
                     <router-link :to="{ name: 'product-list' }"
                         class="text-base text-gray-600 hover:text-black transition duration-300">Shop</router-link>
                     <router-link :to="{ name: 'press' }"

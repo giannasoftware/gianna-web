@@ -52,8 +52,8 @@
 
                             <!-- Filter section, show/hide based on section state. -->
                             <div class="pt-6 absolute -top-40 bg-gray-50 shadow-sm px-4 pb-4 left-0 w-full border border-gray-50"
-                                v-if="showFilter">
-                                <TransitionGroup tag="div" class="space-y-6">
+                                v-show="showFilter">
+                                <TransitionGroup tag="div" class="space-y-6" v-if="showFilter">
                                     <router-link to="#" class="block text-sm font-normal">
                                         My Profile
                                     </router-link>

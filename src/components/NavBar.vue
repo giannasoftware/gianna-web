@@ -122,35 +122,46 @@
                     <div class="pt-4 pl-3" v-show="isExpanded">
                         <TransitionGroup name="category" tag="ul" class="space-y-5" v-if="isExpanded" appear>
 
-                            <li>
-                                <a href="#" class="block text-sm font-normal">
-                                    Dresses
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="block text-sm font-normal">
-                                    Tops
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="block text-sm font-normal">
-                                    Bottoms
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="block text-sm font-normal">
-                                    View all
-                                </a>
-                            </li>
-
-                        </TransitionGroup>
-                    </div>
-
-                </router-link>
+            <li>
+                <a href="#" class="block text-sm font-normal">
+                    Dresses
+                </a>
             </li>
             <li>
+                <a href="#" class="block text-sm font-normal">
+                    Tops
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block text-sm font-normal">
+                    Bottoms
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block text-sm font-normal">
+                    Sets
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block text-sm font-normal">
+                    Timed pieces
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block text-sm font-normal">
+                    View all
+                </a>
+            </li>
+
+            </TransitionGroup>
+            </div>
+
+            </router-link>
+            </li>
+
+            <li>
                 <router-link :to="{ name: 'about' }" class="font-medium text-black block py-1 text-sm capitalize">
-                    About
+                    Founders Letter
                 </router-link>
             </li>
             <li>
